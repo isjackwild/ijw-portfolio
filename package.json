@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "matter-js": "^0.18.0",
+    "parcel": "^2.5.0",
+    "posthtml-include": "^1.7.3",
+    "posthtml-modules": "^0.8.1",
+    "victor": "^1.1.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-xml": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
+    "@parcel/transformer-webmanifest": "^2.5.0",
+    "@parcel/transformer-xml": "^2.5.0"
+  }
+}

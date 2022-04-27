@@ -1,0 +1,588 @@
+$red: #d40b3b;
+$mobile: 736px;
+$xl: 1441px;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins/Poppins-Light.ttf");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins/Poppins-Regular.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins/Poppins-Medium.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins/Poppins-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./webfonts/Poppins/Poppins-Bold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./webfonts/Inconsolata/Inconsolata-Regular.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./webfonts/Inconsolata/Inconsolata-Bold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialias;
+}
+
+a {
+  color: inherit;
+}
+
+.intro {
+  margin-bottom: 6rem;
+
+  @media (min-width: $xl) {
+    margin-bottom: 12rem;
+  }
+}
+
+.intro__tagline {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.025em;
+  font-size: 6.8rem;
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  max-width: 1000px;
+
+  @media (max-width: $mobile) {
+    font-size: 6rem;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 1500px;
+    margin-bottom: 1.5rem;
+    font-size: 12rem;
+  }
+}
+
+.intro__name {
+  font-family: "Work Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 4.2rem;
+  line-height: 1em;
+  letter-spacing: -0.025em;
+
+  @media (max-width: $mobile) {
+    font-size: 3.3rem;
+  }
+
+  @media (min-width: $xl) {
+    font-size: 6rem;
+  }
+}
+
+.about {
+  max-width: 750px;
+  font-size: 2.25rem;
+  line-height: 1.5em;
+  font-family: "Inconsolata", monospace;
+  margin: 14rem auto 13rem auto;
+  // text-justify: inter-word;
+
+  @media (max-width: $mobile) {
+    margin: 1.5rem 2rem 3rem 2rem;
+    font-size: 2.2rem;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 750px;
+    font-size: 2.5rem;
+    margin-top: 20rem;
+    // font-size: 1.8rem;
+    // margin-bottom: 25.0rem;
+  }
+}
+
+.about a.hover {
+  color: $red;
+}
+
+.about__para {
+  margin-bottom: 1em;
+}
+
+.about__para:not(:first-child) {
+  // text-indent: 6rem;
+}
+
+.about__contact {
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}
+
+.about__contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}
+
+.selected-work {
+  padding: 0 10rem 10rem 10rem;
+  // border: 35px solid $red;
+  color: $red !important;
+  text-align: center;
+  // background: #fff;
+  // box-shadow: 0 0 50px 0 rgba(0,0,0,0.66);
+  cursor: pointer;
+  position: relative;
+  box-sizing: content-box;
+  // overflow: hidden;
+
+  @media (max-width: $mobile) {
+    padding: 0 2.5rem 5rem 2.5rem;
+    // border: 25px solid $red;
+  }
+
+  @media (min-width: $xl) {
+    padding: 10rem 15rem 16rem 15rem;
+  }
+}
+
+.border {
+  position: absolute;
+  background: $red;
+}
+
+.border--top,
+.border--bottom {
+  width: 100%;
+  height: 35px;
+  top: 0;
+  left: 0;
+
+  @media (max-width: $mobile) {
+    height: 20px;
+  }
+
+  @media (min-width: $xl) {
+    height: 42px;
+  }
+}
+
+.border--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.border--left,
+.border--right {
+  height: 100%;
+  width: 35px;
+  top: 0;
+  left: 0;
+
+  @media (max-width: $mobile) {
+    width: 20px;
+  }
+
+  @media (min-width: $xl) {
+    width: 42px;
+  }
+}
+
+.border--right {
+  left: initial;
+  right: 0;
+}
+
+.selected-work * {
+  -webkit-user-select: none;
+}
+
+.selected-work__title {
+  margin: 5rem 0 7rem 0;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: default;
+
+  @media (min-width: $xl) {
+    font-size: 1.6rem;
+    margin: 7rem 0 11rem 0;
+  }
+}
+
+.selected-work__title:first-child {
+  margin-top: 0;
+}
+
+.selected-work a:not(.body-link) {
+  text-decoration: none;
+  -webkit-user-select: none !important;
+  display: inline-block;
+}
+
+// .selected-work a.hover {
+// 	text-shadow: 0 0 40px rgba($red, 0.8);
+// }
+
+.selected-work__list {
+  @media (max-width: $mobile) {
+    padding: 3.5rem;
+    padding-top: 5rem;
+  }
+}
+
+.selected-work__list-item {
+  margin-bottom: 7em;
+  display: inline-block;
+  transform-origin: 50% 50%;
+
+  @media (min-width: $xl) {
+    margin-bottom: 10em;
+  }
+}
+
+.selected-work__list-item:last-child {
+  margin-bottom: 4rem;
+}
+
+.selected-work__list-item-title {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.025em;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.1em;
+  margin-bottom: 0.8rem;
+  line-height: 1em;
+  -webkit-user-select: none;
+
+  @media (max-width: $mobile) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $xl) {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.selected-work__span {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1.45em;
+  font-family: "Inconsolata", monospace;
+
+  // @media (min-width: $xl) {
+  // 	font-size: 1.8rem;
+  // }
+}
+
+.selected-work canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 255, 0.1);
+}
+
+.emoji {
+  font-size: 3.2rem;
+  line-height: 1em;
+  pointer-events: none;
+  -webkit-user-select: none;
+
+  @media (min-width: $xl) {
+    font-size: 4rem;
+  }
+}
+
+.emoji--bomb {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: -15px;
+  margin-top: -22px;
+  z-index: 1111;
+
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
+}
+
+.emoji--bomb span {
+  transition: transform 0.07s ease;
+  display: inline-block;
+}
+
+.emoji--bomb:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -10px;
+  background: black;
+  filter: blur(5px);
+  width: 70%;
+  height: 8px;
+  border-radius: 100px;
+  box-shadow: 0 0 5px 0 rgba(#000, 0.5);
+  transition: transform 0.07s ease, opacity 0.07s ease;
+  opacity: 0.25;
+  transform-origin: center center;
+}
+
+.emoji--bomb.touched span {
+  transform: translateY(10px);
+}
+
+.emoji--bomb.touched:after {
+  transform: scale(0.7);
+  opacity: 0.187;
+}
+
+.emoji--fire {
+  position: absolute;
+}
+
+.selected-work:not(.selected-work--item-hover):hover .emoji--bomb {
+  display: block;
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -600px;
+  }
+}
+
+.explosion {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-image: url("./images/burn.gif");
+  background-size: contain;
+  z-index: 2;
+}
+
+.explosion__boom {
+  width: 39px;
+  height: 75px;
+  background-image: url("./images/spritesheet.gif");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  animation: sprite 0.8s steps(15) 1;
+  animation-fill-mode: forwards;
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+}
+
+.case-study {
+  background: #fff;
+  margin-top: 33vw;
+}
+
+.case-study__header {
+  z-index: -1;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 33vw;
+  // background: url("./unstable-ground/cover--teal.jpg");
+  display: block;
+  // position: relative;
+  margin-bottom: 14rem;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 8rem;
+  }
+}
+.case-study {
+  padding-top: 3rem;
+}
+
+.case-study__title {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.025em;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+  margin-top: 2.6em;
+  line-height: 1em;
+  color: $red;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media (min-width: $xl) {
+    font-size: 5rem;
+    // margin-bottom: 1.5em;
+  }
+}
+
+.case-study__para {
+  max-width: 650px;
+  font-size: 2.25rem;
+  line-height: 1.5em;
+  font-family: "Inconsolata", monospace;
+  margin: 0 auto 1em auto;
+  // text-justify: inter-word;
+
+  @media (max-width: $mobile) {
+    font-size: 2.2rem;
+    margin: 1.5rem 2rem 3rem 2rem;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 750px;
+    font-size: 2.5rem;
+  }
+}
+
+figure {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  margin: 6rem auto;
+  padding: 0 5px;
+  width: 660px;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding-left: calc(2rem - 5px);
+    padding-right: calc(2rem - 5px);
+  }
+
+  @media (min-width: $xl) {
+    width: 750px;
+  }
+}
+
+.figure--full {
+  width: 100%;
+  padding: 0 40px;
+
+  @media (max-width: $mobile) {
+    padding-left: calc(2rem - 5px);
+    padding-right: calc(2rem - 5px);
+  }
+  // margin: 12rem auto;
+}
+
+figcaption {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.5rem;
+  // margin-top: 5px;
+  text-align: left;
+  padding: 0 5px;
+  color: $red;
+  max-width: 520px;
+}
+
+figure img,
+figure video {
+  padding: 5px;
+}
+
+.img--small {
+  width: 25%;
+  height: auto;
+
+  @media (max-width: $mobile) {
+    width: 50%;
+  }
+}
+
+.img--medium {
+  width: 33.33%;
+  height: auto;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.img--large {
+  width: 50%;
+  height: auto;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.img--xl {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+figure audio {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.text--red {
+  color: $red;
+}
+
+i {
+  font-style: normal;
+  // font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  font-size: 0.77em;
+  letter-spacing: 0.17em;
+  color: $red;
+}
