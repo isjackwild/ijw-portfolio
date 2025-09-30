@@ -7,8 +7,8 @@ import {
   Body,
   MouseConstraint,
   Mouse,
-} from "matter-js";
-import Victor from "victor";
+} from "../../node_modules/matter-js/build/matter.js";
+import Victor from "../../node_modules/victor/index.js";
 let engine;
 let list, items, titles, fire, bomb;
 let particles = [],

@@ -2,6 +2,7 @@ import { init as initPhysics } from "./js/physics.js";
 let bomb, list;
 
 const kickIt = () => {
+  console.log("kick it");
   const items = [
     ...document.getElementsByClassName("selected-work__list-item"),
   ];
